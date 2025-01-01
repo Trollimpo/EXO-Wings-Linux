@@ -8,7 +8,6 @@ This means that not every Linux ISO will boot on this machine. In particular, yo
 
 In my case, i decided to install ArchLinux on my machine.
 
-Note: i haven't managed to succesfully boot any ISO which includes `bootia32.efi` from a Ventoy USB. I recommend you burn the ISO directly to the install medium.
-
 While this device does have a microSD card reader built-in, it doesn't like to boot from it, so you will need to plug your install medium to the USB port included in the machine's detachable keyboard
 
+Note: i haven't managed to succesfully boot any ISO which includes `bootia32.efi` from a Ventoy USB. I recommend you burn the ISO directly to the install medium.
