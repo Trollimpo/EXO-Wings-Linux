@@ -15,9 +15,12 @@ Note: i haven't managed to succesfully boot any ISO which includes `bootia32.efi
 ## Choosing a Desktop Enviroment
 I chose to run Plasma Mobile for this device, but GNOME, KDE Plasma, and Phosh are good options too.
 
-## Installing and configuring Linux
+## Installing and Configuring Linux
 ### Initial Installation
 I installed Arch using `archinstall`, choosing to NOT install a DE. The removable keyboard uses `es` keyboard distribution.
 
 ### Plasma Mobile Install
 I installed Plasma Mobile by running `yay -S plasma-mobile konsole` (this WILL take a while to compile, this machine isn't very fast)
+
+### Screen Rotation Fix
+By default, the screen rotation is reversed on this machine (rotating the device clockwise will rotate the screen counter-clockwise and viceversa). Fixing this requires placing the `61-sensor-local.hwdb` file on `/etc/udev/hwdb.d/`
