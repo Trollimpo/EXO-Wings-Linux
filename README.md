@@ -20,3 +20,4 @@ I chose to run Plasma Mobile for this device, but GNOME, KDE Plasma, and Phosh a
 I installed Arch using `archinstall`, choosing to NOT install a DE. The removable keyboard uses `es` keyboard distribution.
 
 ### Plasma Mobile Install
+I installed Plasma Mobile by running `yay -S plasma-mobile konsole` (this WILL take a while to compile, this machine isn't very fast)
