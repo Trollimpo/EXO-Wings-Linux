@@ -19,6 +19,13 @@ I chose to run Plasma Mobile for this device, but GNOME, KDE Plasma, and Phosh a
 ### Initial Installation
 I installed Arch using `archinstall`, choosing to NOT install a DE. The removable keyboard uses `es` keyboard distribution.
 
+### AUR Helper
+`sudo pacman -Syu`
+`sudo pacman -S --needed base-devel git`
+`git clone https://aur.archlinux.org/yay.git`
+`cd yay`
+`makepkg -si`
+
 ### Plasma Mobile Install
 I installed Plasma Mobile by running `yay -S plasma-mobile konsole sddm` (this WILL take a while to compile, this machine isn't very fast).
 
@@ -29,3 +36,6 @@ By default, the screen rotation is reversed on this machine (rotating the device
 
 ### Front and Back Cameras
 Don't work yet :(
+
+### TPM 90s Startjob Fix
+`systemctl mask dev-tpmrm0.device`
