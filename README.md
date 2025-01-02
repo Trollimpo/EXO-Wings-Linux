@@ -21,9 +21,13 @@ I installed Arch using `archinstall`, choosing to NOT install a DE. The removabl
 
 ### AUR Helper
 `sudo pacman -Syu`
+
 `sudo pacman -S --needed base-devel git`
+
 `git clone https://aur.archlinux.org/yay.git`
+
 `cd yay`
+
 `makepkg -si`
 
 ### Plasma Mobile Install
