@@ -25,7 +25,7 @@ I installed Plasma Mobile by running `yay -S plasma-mobile konsole sddm` (this W
 Place `virtualkbd.conf` on `/etc/sddm.conf.d/` to get the virtual keyboard working on SDDM, so that login on tablet mode is possible. 
 
 ### Screen Rotation Fix
-By default, the screen rotation is reversed on this machine (rotating the device clockwise will rotate the screen counter-clockwise and viceversa). Fixing this requires placing the `61-sensor-local.hwdb` file on `/etc/udev/hwdb.d/` and running `systemd-hwdb update` and then `udevadm trigger` to apply the changes.
+By default, the screen rotation is reversed on this machine (rotating the device clockwise will rotate the screen counter-clockwise and viceversa). Fixing this requires installing `iio-sensor-proxy` and placing the `61-sensor-local.hwdb` file on `/etc/udev/hwdb.d/` and running `systemd-hwdb update` and then `udevadm trigger` to apply the changes.
 
 ### Front and Back Cameras
 Don't work yet :(
