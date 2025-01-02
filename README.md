@@ -12,14 +12,14 @@ While this device does have a microSD card reader built-in, it doesn't like to b
 
 Note: i haven't managed to succesfully boot any ISO which includes `bootia32.efi` from a Ventoy USB on this machine. I recommend you burn the ISO directly to the install medium.
 
-## Choosing a Desktop Enviroment
+# Choosing a Desktop Enviroment
 I chose to run Plasma Mobile for this device, but GNOME, KDE Plasma, and Phosh are good options too.
 
-## Installing and Configuring Linux
-### Initial Installation
+# Installing and Configuring Linux
+## Initial Installation
 I installed Arch using `archinstall`, choosing to NOT install a DE. The removable keyboard uses `es` keyboard distribution.
 
-### AUR Helper
+## AUR Helper
 `sudo pacman -Syu`
 
 `sudo pacman -S --needed base-devel git`
@@ -30,16 +30,27 @@ I installed Arch using `archinstall`, choosing to NOT install a DE. The removabl
 
 `makepkg -si`
 
-### Plasma Mobile Install
-I installed Plasma Mobile by running `yay -S plasma-mobile konsole sddm kate` (this WILL take a while to compile, this machine isn't very fast).
+## Plasma Mobile Install
+### Install Plasma Mobile
 
-Place `virtualkbd.conf` on `/etc/sddm.conf.d/` to get the virtual keyboard working on SDDM, so that login on tablet mode is possible. 
+`yay -S plasma-mobile konsole sddm kate` (this WILL take a while to compile, this machine isn't very fast).
 
-### Screen Rotation Fix
-By default, the screen rotation is reversed on this machine (rotating the device clockwise will rotate the screen counter-clockwise and viceversa). Fixing this requires installing `iio-sensor-proxy` and placing the `61-sensor-local.hwdb` file on `/etc/udev/hwdb.d/`, and then running `systemd-hwdb update` and `udevadm trigger` to apply the changes.
+### Enable network manager and bluetooth
 
-### Front and Back Cameras
+`systemctl enable NetworkManager.service`
+
+`systemctl enable bluetooth.service`
+
+### Virtual keyboard on login screen
+Place `virtualkbd.conf` on `/etc/sddm.conf.d/` 
+
+## Screen Rotation Fix
+By default, the screen rotation is reversed on this machine (rotating the device clockwise will rotate the screen counter-clockwise and viceversa).
+
+Fixing this requires installing `iio-sensor-proxy` and placing the `61-sensor-local.hwdb` file on `/etc/udev/hwdb.d/`, and then running `systemd-hwdb update` and `udevadm trigger` to apply the changes.
+
+## Front and Back Cameras
 Don't work yet :(
 
-### TPM 90s Startjob Fix
+## TPM 90s Startjob Fix
 `systemctl mask dev-tpmrm0.device`
