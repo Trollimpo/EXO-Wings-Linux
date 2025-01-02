@@ -31,7 +31,7 @@ I installed Arch using `archinstall`, choosing to NOT install a DE. The removabl
 `makepkg -si`
 
 ### Plasma Mobile Install
-I installed Plasma Mobile by running `yay -S plasma-mobile konsole sddm` (this WILL take a while to compile, this machine isn't very fast).
+I installed Plasma Mobile by running `yay -S plasma-mobile konsole sddm kate` (this WILL take a while to compile, this machine isn't very fast).
 
 Place `virtualkbd.conf` on `/etc/sddm.conf.d/` to get the virtual keyboard working on SDDM, so that login on tablet mode is possible. 
 
