@@ -33,7 +33,7 @@ I installed Arch using `archinstall`, choosing to NOT install a DE. The removabl
 ## Plasma Mobile Install
 ### Install Plasma Mobile
 
-`yay -S plasma-mobile konsole sddm kate` (this WILL take a while to compile, this machine isn't very fast).
+`yay -S plasma-mobile konsole sddm kate dolphin` (this WILL take a while to compile, this machine isn't very fast).
 
 ### Enable network manager and bluetooth
 
@@ -42,12 +42,17 @@ I installed Arch using `archinstall`, choosing to NOT install a DE. The removabl
 `systemctl enable bluetooth.service`
 
 ### Virtual keyboard on login screen
+
+Run `yay -S maliit-keyboard qt5-wayland`
+
 Place `virtualkbd.conf` on `/etc/sddm.conf.d/` 
 
 ## Screen Rotation Fix
 By default, the screen rotation is reversed on this machine (rotating the device clockwise will rotate the screen counter-clockwise and viceversa).
 
-Fixing this requires installing `iio-sensor-proxy` and placing the `61-sensor-local.hwdb` file on `/etc/udev/hwdb.d/`, and then running `systemd-hwdb update` and `udevadm trigger` to apply the changes.
+Fixing this requires installing `iio-sensor-proxy` and placing the `61-sensor-local.hwdb` file on `/etc/udev/hwdb.d/`
+
+Run `systemd-hwdb update` and `udevadm trigger`; then reboot to apply changes. 
 
 ## Front and Back Cameras
 Don't work yet :(
