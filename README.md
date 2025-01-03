@@ -33,7 +33,7 @@ I installed Arch using `archinstall`, choosing to NOT install a DE. The removabl
 ## Plasma Mobile Install
 ### Install Plasma Mobile
 
-`yay -S plasma-mobile konsole sddm kate dolphin` (this WILL take a while to compile, this machine isn't very fast).
+`yay -S plasma-mobile konsole sddm dolphin` (this WILL take a while to compile, this machine isn't very fast).
 
 ### Enable network manager and bluetooth
 
