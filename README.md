@@ -41,6 +41,10 @@ I installed Arch using `archinstall`, choosing to NOT install a DE. The removabl
 
 `systemctl enable bluetooth.service`
 
+### Install Bluetooth manager
+
+`yay -S bluedevil`
+
 ### Virtual keyboard on login screen
 
 Run `yay -S maliit-keyboard qt5-wayland`
